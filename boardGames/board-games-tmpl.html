@@ -1,0 +1,14 @@
+<div>boardGames</div>
+
+<input ng-mdoel='playerInput' placeholder="Player Name"/>
+
+<button ng-click='addPlayer()'>Add Player</button>
+
+<div ng-repeat='player in players'>
+
+  <div>{{player.name}}</div>
+  <div>{{player.score}}</div>
+  <!-- <button ng-click='{{player.incrementFunciton()}}'>+</button>
+  <button ng-click='{{player.decrementFunciton()}}'>-</button> -->
+
+</div>

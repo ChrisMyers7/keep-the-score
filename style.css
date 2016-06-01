@@ -1,0 +1,42 @@
+/*header styles here*/
+
+.main-header {
+  width: 100%;
+  height: vh;
+  background: ;
+  display: flex;
+  justify-content: center;
+}
+
+.navagation-icons {
+  color: red;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+
+/*home styles here*/
+
+
+
+
+/*board Game styles here*/
+
+
+
+
+/*sports styles here*/
+
+.team {
+  height: 50vh;
+  width: 50%;
+  text-align: center;
+}
+.sports-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
