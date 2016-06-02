@@ -3,6 +3,16 @@ angular.module('scoreApp')
 
     $scope.players = boardGamesService.getPlayers();
 
-    $scope.addPlayer = boardGamesService.addPlayer($scope.playerInput)
+    $scope.addNewPlayer = function(e) {
+      if (e.keyCode === 13) {
+      boardGamesService.addPlayer($scope.playerInput);
+      $scope.playerInput = '';
+      }
+    }
 
-  })
+    $scope.clickNewPlayer = function() {
+      boardGamesService.addPlayer($scope.playerInput);
+      $scope.playerInput = '';
+    }
+
+})

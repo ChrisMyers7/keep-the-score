@@ -14,8 +14,6 @@ angular.module('scoreApp')
       $scope.team1--;
     }
 
-
-
     $scope.team2 = 0;
 
     $scope.incrementTeam2 = function() {

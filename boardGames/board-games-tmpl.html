@@ -1,14 +1,17 @@
-<div>boardGames</div>
+<section class="board-input-player">
+  <input class="board-player-input"ng-model='playerInput' placeholder="New Player..." ng-keyup='addNewPlayer($event)'/>
 
-<input ng-mdoel='playerInput' placeholder="Player Name"/>
+  <button ng-click='clickNewPlayer()'>Add Player</button>
+</section>
 
-<button ng-click='addPlayer()'>Add Player</button>
+<div class="board-player-container">
+  <div class="board-player" ng-repeat='player in players'>
 
-<div ng-repeat='player in players'>
+    <div class="board-player-name">{{player.name}}</div>
+    <div class="board-player-score">{{player.score}}</div>
+    <button class="board-player-add board-button"ng-click='player.incrementScore()'>+</button>
+    <button class="board-player-minus board-button"ng-click='player.decrementScore()'>-</button>
 
-  <div>{{player.name}}</div>
-  <div>{{player.score}}</div>
-  <!-- <button ng-click='{{player.incrementFunciton()}}'>+</button>
-  <button ng-click='{{player.decrementFunciton()}}'>-</button> -->
 
+  </div>
 </div>
