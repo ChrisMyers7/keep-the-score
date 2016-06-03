@@ -104,12 +104,13 @@ button:hover {
       border: none;
       color: #62d9ff;
       height: 30px;
-      width: 80px;
+      width: 120px;
       border-top-left-radius: 7px;
       border-top-right-radius: 7px;
       border-bottom-left-radius: 7px;
       border-bottom-right-radius: 7px;
       display: inline;
+      font-family: 'sigmar one';
     }
     .board-input-player button:hover {
       color: #ff3300;
@@ -131,7 +132,7 @@ button:hover {
     .board-player {
       flex-grow: 1;
       height: 10vh;
-      width: 30%;
+      width: 20%;
       /*border: solid pink;*/
       padding-top: 3vh;
       font-size: 30px
@@ -165,7 +166,19 @@ button:hover {
           display: inline-block;
         }
 
-
+    .ready-button {
+      background: #ff3300;
+      color: #62D9FF;
+      border: none;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      height: 30px;
+      width: 220px;
+      margin-left: 570px;
+      font-family: 'sigmar one'
+    }
 
 
 /*sports styles here*/

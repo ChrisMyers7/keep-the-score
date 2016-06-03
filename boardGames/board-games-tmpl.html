@@ -6,9 +6,9 @@
 
     <div class="opening-text">Choose Your Opponents</div>
 
-    <input class="board-player-input"ng-model='playerInput' placeholder="New Player..." ng-keyup='addNewPlayer($event)'/>
+    <input class="board-player-input"ng-model='playerInput' ng-keyup='addNewPlayer($event)'/>
 
-    <button ng-click='clickNewPlayer()'>Add Player</button>
+    <button ng-click='clickNewPlayer()'>Add Me</button>
   </section>
 
   <div class="board-player-container">
@@ -22,4 +22,5 @@
 
     </div>
   </div>
+  <button class="ready-button">Click when Ready to play</button>
 </div>
