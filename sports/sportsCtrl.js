@@ -1,7 +1,9 @@
 angular.module('scoreApp')
   .controller('sportsCtrl', function($scope, sportsService) {
 
-    $scope.team1 = 0;
+    $scope.team1 = sportsService.team1;
+
+    $scope.team2 = sportsService.team2;
 
     $scope.incrementTeam1 = function() {
       $scope.team1++;

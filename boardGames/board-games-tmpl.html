@@ -1,17 +1,25 @@
-<section class="board-input-player">
-  <input class="board-player-input"ng-model='playerInput' placeholder="New Player..." ng-keyup='addNewPlayer($event)'/>
 
-  <button ng-click='clickNewPlayer()'>Add Player</button>
-</section>
+<a ui-sref='home'><div class="logo" id="boardgame-logo"></div></a>
 
-<div class="board-player-container">
-  <div class="board-player" ng-repeat='player in players'>
+<div class='board-background'>
+  <section class="board-input-player">
 
-    <div class="board-player-name">{{player.name}}</div>
-    <div class="board-player-score">{{player.score}}</div>
-    <button class="board-player-add board-button"ng-click='player.incrementScore()'>+</button>
-    <button class="board-player-minus board-button"ng-click='player.decrementScore()'>-</button>
+    <div class="opening-text">Choose Your Opponents</div>
+
+    <input class="board-player-input"ng-model='playerInput' placeholder="New Player..." ng-keyup='addNewPlayer($event)'/>
+
+    <button ng-click='clickNewPlayer()'>Add Player</button>
+  </section>
+
+  <div class="board-player-container">
+    <div class="board-player" ng-repeat='player in players'>
+
+      <div class="board-player-name">{{player.name}}</div>
+      <div class="board-player-score">{{player.score}}</div>
+      <button class="board-player-add board-button"ng-click='player.incrementScore()'>+</button>
+      <button class="board-player-minus board-button"ng-click='player.decrementScore()'>-</button>
 
 
+    </div>
   </div>
 </div>

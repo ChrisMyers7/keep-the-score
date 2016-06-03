@@ -1,15 +1,15 @@
-<div>Sports</div>
+<a ui-sref='home'><div class="logo" id="sports-logo"></div></a>
 
 <div class="sports-container">
-  <div  class="team1-container team">
-    <div class="team1-score score">Team 1: {{team1}}</div>
+  <div  class="team1-container team">Team 1
+    <div class="team1-score score">{{team1}}</div>
     <button ng-click='incrementTeam1()' class="change-score increment">+</button>
     <button ng-click='decrementTeam1()' class="change-score decrement">-</button>
   </div>
 
 
-  <div  class="team2-container team">
-    <div class="team2-score score">Team 2: {{team2}}</div>
+  <div  class="team2-container team">Team 2
+    <div class="team2-score score">{{team2}}</div>
     <button ng-click='incrementTeam2()' class="change-score increment">+</button>
     <button ng-click='decrementTeam2()' class="change-score decrement">-</button>
   </div>
