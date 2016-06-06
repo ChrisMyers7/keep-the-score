@@ -3,11 +3,25 @@ angular.module('scoreApp')
 
     var teams = [];
 
-    this.team1 = 0;
-
-    this.team2 = 0;
-
-    this.addTeam = function() {
-      
+    this.getTeam = function() {
+      return teams;
     }
+
+    this.addTeam = function(teamName) {
+      var newTeam = {
+        name: teamName,
+        score: 0,
+        incrementScore: function() {
+          this.score++;
+        },
+        decrementScore: function() {
+          if (this.score === 0) {
+            return;
+          }
+          this.score--;
+        }
+      }
+      teams.push(newTeam);
+    }
+
   })

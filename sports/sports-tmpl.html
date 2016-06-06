@@ -1,16 +1,21 @@
 <a ui-sref='home'><div class="logo" id="sports-logo"></div></a>
 
+
+
 <div class="sports-container">
-  <div  class="team1-container team">Team 1
-    <div class="team1-score score">{{team1}}</div>
-    <button ng-click='incrementTeam1()' class="change-score increment">+</button>
-    <button ng-click='decrementTeam1()' class="change-score decrement">-</button>
+
+  <div class="sports-input-container">
+    <input ng-model='teamInput' ng-keyup='enterTeam($event)' class="team-input"/>
+    <button ng-click='addTeam()' class="add-team-button">Add Team</button>
   </div>
 
-
-  <div  class="team2-container team">Team 2
-    <div class="team2-score score">{{team2}}</div>
-    <button ng-click='incrementTeam2()' class="change-score increment">+</button>
-    <button ng-click='decrementTeam2()' class="change-score decrement">-</button>
+  <div  class="team-container" >
+    <div class="" ng-repeat='team in teams'>
+      <div class="team-name">{{team.name}}</div>
+      <div class="team1-score score">{{team.score}}</div>
+      <button ng-click='team.incrementScore()' class="change-score increment">+</button>
+      <button ng-click='team.decrementScore()' class="change-score decrement">-</button>
+    </div>
   </div>
+
 </div>

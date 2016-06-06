@@ -1,32 +1,18 @@
 angular.module('scoreApp')
   .controller('sportsCtrl', function($scope, sportsService) {
 
-    $scope.team1 = sportsService.team1;
+    $scope.teams = sportsService.getTeam();
 
-    $scope.team2 = sportsService.team2;
-
-    $scope.incrementTeam1 = function() {
-      $scope.team1++;
-    }
-
-    $scope.decrementTeam1 = function() {
-      if ($scope.team1 === 0) {
-        return;
+    $scope.enterTeam = function(e) {
+      if (e.keyCode === 13) {
+        $scope.addTeam();
       }
-      $scope.team1--;
     }
 
-    $scope.team2 = 0;
-
-    $scope.incrementTeam2 = function() {
-      $scope.team2++;
-    }
-
-    $scope.decrementTeam2 = function() {
-      if ($scope.team2 === 0) {
-        return;
-      }
-      $scope.team2--;
+    $scope.addTeam = function() {
+      console.log('b');
+      sportsService.addTeam($scope.teamInput);
+      $scope.teamInput = '';
     }
 
   })

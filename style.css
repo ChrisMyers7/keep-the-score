@@ -199,30 +199,62 @@ button:hover {
   width: 100%;
   background: url('./img/pokestadium.PNG') no-repeat;
   background-size: cover;
-  opacity: .9;
 }
-    .team {
-      height: 50vh;
-      width: 50%;
+    .sports-input-container {
+      height: 30px;
+      width: 100%;
       text-align: center;
-      color: #ff3300;
-      font-size: 100px;
-      margin-top: 100px;
-      opacity: 1;
+      margin-top: 50px;
+      font-family: 'sigmar one', sans-serif;
     }
-        .change-score {
+        .team-input {
+          height: 30px;
+          background: none;
+          border-color: #ff3300;
+          color: #ff3300;
+          text-align: center;
+          font-family: 'sigmar one', sans-serif;
+          font-size: 15px;
+        }
+        .add-team-button {
+          height: 30px;
           background: #ff3300;
           border: none;
-          height: 60px;
-          width: 60px;
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;
           border-bottom-left-radius: 10px;
           border-bottom-right-radius: 10px;
-          font-size: 30px;
+          color: #62d9ff;
+          font-family: 'sigmar one', sans-serif;
         }
-        .score {
-          font-size: 300px;
-          color: #62D9FF;
-          font-family: 'Orbitron', 'sigmar one';
+    .team-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 100px;
+    }
+        .team-name {
+          height: 50vh;
+          width: 50%;
+          text-align: center;
+          color: #ff3300;
+          font-size: 100px;
+          margin-top: 100px;
+          opacity: 1;
         }
+            .change-score {
+              background: #ff3300;
+              border: none;
+              height: 60px;
+              width: 60px;
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+              border-bottom-left-radius: 10px;
+              border-bottom-right-radius: 10px;
+              font-size: 30px;
+            }
+            .score {
+              font-size: 300px;
+              color: #62D9FF;
+              font-family: 'Orbitron', 'sigmar one';
+            }
