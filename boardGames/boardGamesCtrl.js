@@ -14,4 +14,20 @@ angular.module('scoreApp')
       $scope.playerInput = '';
     }
 
+    $scope.incrementScore = function(e, scoreInput) {
+      if (scoreInput) {
+        $scope.players[e].score = $scope.players[e].score + parseInt(scoreInput);
+      } else {
+        $scope.players[e].score++;
+      }
+    }
+
+    $scope.decrementScore = function(e, scoreInput) {
+      if (scoreInput) {
+        $scope.players[e].score = $scope.players[e].score - parseInt(scoreInput);
+      } else {
+        $scope.players[e].score--;
+      }
+    }
+
 })

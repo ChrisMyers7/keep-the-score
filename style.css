@@ -18,11 +18,9 @@ button:hover {
   width: 400px;
   background: url('./img/Scoretle.jpg') no-repeat;
   background-size: cover;
-  position: absolute;
   z-index: -10;
-  margin: auto;
-  right: 35%;
-  top: 0
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-container {
@@ -31,7 +29,7 @@ button:hover {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 300px;
+  margin-top: -100px;
   justify-content: space-between;
 }
 
@@ -45,7 +43,7 @@ button:hover {
       box-shadow: 5px;
       font-size: 40px;
       font-family: 'sigmar one', sans-serif;
-      color: grey;
+      color: #62d9ff;
       background: #ff3300;
       border: none;
     }
@@ -65,8 +63,12 @@ button:hover {
   height: 100px;
   width: 100px;
   position: absolute;
-  left: -750px;
-  top: 13px;
+  left: 10px;
+  top: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .board-background {
@@ -74,21 +76,24 @@ button:hover {
   background-size: cover;
   height: 105vh;
   width: 100%;
-  margin-top: 0px;
-
 }
-
+.board-play {
+  color: #ff3300;
+  font-size: 100px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
 .board-input-player {
   height: 20vh;
   width: 100%;
   text-align: center;
   /*margin-top: 10px;*/
-  padding-top: 30px
+  padding-top: 10px;
 }
     .opening-text {
       color: #ff3300;
       font-size: 60px;
-      margin-top: px
     }
     .board-player-input {
       background: transparent;
@@ -121,7 +126,7 @@ button:hover {
 .board-player-container {
   width: 100%;
   height: 70vh;
-  margin-top: 10px;
+  margin-top: px;
   text-align: center;
   color: #ff3300;
   display: flex;
@@ -131,22 +136,41 @@ button:hover {
 }
     .board-player {
       flex-grow: 1;
-      height: 10vh;
-      width: 20%;
-      /*border: solid pink;*/
+      height: 30vh;
+      width: 18%;
       padding-top: 3vh;
-      font-size: 30px
-
+      font-size: 30px;
+      background: #020202;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin: 10px;
+      opacity: .8;
     }
         .board-player-name {
           display: inline-block;
           text-decoration: underline;
+          opacity: 1;
+          flex-grow: 1;
         }
         .board-player-score {
-          display: block;
-          font-size: 100px;
+          flex-grow: 1;
+          font-size: 90px;
           color: #62D9FF;
-          font-family: 'orbitron'
+          font-family: 'orbitron', sans-serif;
+          opacity: 1;
+        }
+        .board-input-score {
+          height: 20px;
+          width: 60px;
+          font-size: 20px;
+          font-family: 'orbitron';
+          border-color: #ff3300;
+          background: rgba(2, 2, 2, 0.5);
+          color: #ff2200;
+          text-align: center;
+          display: none;
         }
         .board-button {
           background: #ff3300;
@@ -158,6 +182,8 @@ button:hover {
           border-bottom-right-radius: 5px;
           height: 30px;
           width: 30px;
+          font-size: 25px;
+          opacity: 1;
         }
         .board-player-add {
           display: inline-block;
@@ -166,6 +192,10 @@ button:hover {
           display: inline-block;
         }
 
+    .footer-button {
+      width: 100%;
+      text-align: center;
+    }
     .ready-button {
       background: #ff3300;
       color: #62D9FF;
@@ -174,10 +204,16 @@ button:hover {
       border-top-right-radius: 5px;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
-      height: 30px;
-      width: 220px;
-      margin-left: 570px;
+      height: 35px;
+      width: 150px;
+      font-size: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
       font-family: 'sigmar one'
+    }
+    .hidden-footer-button {
+      width: 600px;
     }
 
 
@@ -187,29 +223,43 @@ button:hover {
   height: 100px;
   width: 100px;
   position: absolute;
-  left: -750px;
-  top: 20px;
+  left: 10px;
+  top: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .sports-container {
-  display: flex;
-  flex-direction: row;
-  justify-content:space-between;
   height: 100vh;
   width: 100%;
   background: url('./img/pokestadium.PNG') no-repeat;
   background-size: cover;
+  padding-top: 30px;
 }
+    .i-choose-you {
+      color: #ff3300;
+      font-size: 70px;
+      text-align: center;
+      margin-bottom: 25px
+    }
+
     .sports-input-container {
       height: 30px;
       width: 100%;
       text-align: center;
-      margin-top: 50px;
       font-family: 'sigmar one', sans-serif;
+      margin-bottom: 90px;
+    }
+    .sports-input-container div {
+      color: #ff3300;
+      font-size: 50px;
+      margin-bottom: 20px;
     }
         .team-input {
           height: 30px;
-          background: none;
+          background: rgba(2, 2, 2, 0.8);
           border-color: #ff3300;
           color: #ff3300;
           text-align: center;
@@ -231,19 +281,42 @@ button:hover {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      margin-top: 100px;
+      text-align: center;
+      height: 60vh;
+      width: 100%;
     }
-        .team-name {
-          height: 50vh;
-          width: 50%;
+        .single-team {
           text-align: center;
-          color: #ff3300;
-          font-size: 100px;
-          margin-top: 100px;
-          opacity: 1;
+          flex-grow: 1;
+          height: 65vh;
+          width: 50%;
+          background: rgba(2, 2, 2, 0.8);
+          /*opacity: .8;*/
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          margin: 10px;
         }
+            .team-name {
+              text-align: center;
+              color: #ff3300;
+              font-size: 80px;
+            }
+            .input-score {
+              height: 40px;
+              width: 80px;
+              font-size: 20px;
+              font-family: 'orbitron';
+              border-color: #ff3300;
+              background: rgba(2, 2, 2, 0.5);
+              color: #ff2200;
+              text-align: center;
+              display: none;
+            }
             .change-score {
               background: #ff3300;
+              color: #62d9ff;
               border: none;
               height: 60px;
               width: 60px;
@@ -254,7 +327,24 @@ button:hover {
               font-size: 30px;
             }
             .score {
-              font-size: 300px;
+              font-size: 250px;
               color: #62D9FF;
               font-family: 'Orbitron', 'sigmar one';
             }
+    .ready-up {
+      text-align: center;
+      margin-top: 50px
+    }
+    .ready-up-button {
+      background: #ff3300;
+      border: none;
+      color: #62d9ff;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      height: 35px;
+      width: 150px;
+      font-size: 20px;
+      font-family: 'sigmar one', sans-serif;
+    }

@@ -1,21 +1,30 @@
-<a ui-sref='home'><div class="logo" id="sports-logo"></div></a>
-
-
-
 <div class="sports-container">
 
+  <a ui-sref='home'><div class="logo" id="sports-logo"></div></a>
+
+  <div class='i-choose-you'>
+    <p>I Choose You!</p>
+  </div>
+
   <div class="sports-input-container">
+    <div>Choose Your Opponent</div>
     <input ng-model='teamInput' ng-keyup='enterTeam($event)' class="team-input"/>
     <button ng-click='addTeam()' class="add-team-button">Add Team</button>
   </div>
 
   <div  class="team-container" >
-    <div class="" ng-repeat='team in teams'>
+    <div class="single-team" ng-repeat='team in teams'>
       <div class="team-name">{{team.name}}</div>
       <div class="team1-score score">{{team.score}}</div>
-      <button ng-click='team.incrementScore()' class="change-score increment">+</button>
-      <button ng-click='team.decrementScore()' class="change-score decrement">-</button>
+      <input class="input-score" ng-model='inputScore' />
+      <button ng-click='incrementScore($index, inputScore)' type='number' class="change-score">+</button>
+      <button ng-click='decrementScore($index, inputScore)' class="change-score">-</button>
     </div>
+  </div>
+
+  <div class="ready-up">
+    <button class="ready-up-button" sport-ready-up>Ready?</button>
+    <button class="ready-button hidden-footer-button" sport-ready-up>I'm Embarrassed... I Thought i was ready</button>
   </div>
 
 </div>

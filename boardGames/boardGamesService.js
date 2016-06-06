@@ -8,18 +8,12 @@ angular.module('scoreApp')
     }
 
     this.addPlayer = function(playerName) {
+      if (players.length === 10) {
+        return;
+      }
       var newPlayer = {
         name: playerName,
-        score: 0,
-        incrementScore: function() {
-          this.score++;
-        },
-        decrementScore: function() {
-          if (this.score === 0) {
-            return;
-          }
-          this.score--;
-        }
+        score: 0
       }
       players.push(newPlayer);
     }

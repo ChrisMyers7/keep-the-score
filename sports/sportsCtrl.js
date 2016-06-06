@@ -10,9 +10,24 @@ angular.module('scoreApp')
     }
 
     $scope.addTeam = function() {
-      console.log('b');
       sportsService.addTeam($scope.teamInput);
       $scope.teamInput = '';
+    }
+
+    $scope.incrementScore = function(e, scoreInput) {
+      if (scoreInput) {
+        $scope.teams[e].score = $scope.teams[e].score + parseInt(scoreInput);
+      } else {
+        $scope.teams[e].score++;
+      }
+    }
+
+    $scope.decrementScore = function(e, scoreInput) {
+      if (scoreInput) {
+        $scope.teams[e].score = $scope.teams[e].score - parseInt(scoreInput);
+      } else {
+        $scope.teams[e].score--;
+      }
     }
 
   })
