@@ -54,6 +54,53 @@ button:hover {
     font-size: 24px;
     margin-top: 70px
   }
+  @media (max-width: 1000px) {
+    .home-container {
+      margin-top: -50px;
+      width: 80%;
+    }
+  }
+  @media (max-width: 800px) {
+    .logo {
+      width: 300px;
+      height: 300px;
+    }
+    .home-container {
+      margin-top: -40px;
+      width: 80%;
+      flex-direction: column;
+      height: 60vh;
+    }
+    .home-buttons {
+      width: 100%;
+      height: 30vh;
+      margin-top: 20px;
+      font-size: 50px;
+    }
+  }
+  @media (max-width: 600px) {
+    .logo {
+      width: 200px;
+      height: 200px;
+    }
+    .home-container {
+      flex-direction: column;
+      width: 80%;
+      height: 50vh;
+      margin-top: 1px;
+    }
+    .home-buttons {
+      width: 100%;
+      height: vh;
+      margin-top: 20px;
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 500px) {
+    .home-container {
+      width: 80%;
+    }
+  }
 
 
 
@@ -172,7 +219,6 @@ button:hover {
           font-size: 90px;
           color: #62D9FF;
           font-family: 'orbitron', sans-serif;
-          opacity: 1;
         }
         .board-input-score {
           height: 20px;
@@ -229,7 +275,31 @@ button:hover {
       width: 600px;
     }
 
-
+    @media (max-width: 1100px) {
+      .board-player {
+        width: 20%;
+      }
+    }
+    @media (max-width: 768px) {
+      .board-player {
+        width: 25%;
+        height: 20vh;
+      }
+      .board-background {
+      }
+    }
+    @media (max-width: 500px) {
+      .board-player {
+        width: 33%;
+        height: 24vh;
+      }
+    }
+    @media (max-width: 400px) {
+      .board-player {
+        width: 50%;
+        height: 25vh;
+      }
+    }
 /*sports styles here*/
 #sports-logo {
   z-index: 1;
@@ -361,4 +431,24 @@ button:hover {
       width: 150px;
       font-size: 20px;
       font-family: 'sigmar one', sans-serif;
+    }
+    @media (max-width: 1000px) {
+      .team-container {
+        flex-direction: column;
+      }
+      .single-team {
+        width: 100%;
+        height: 32vh;
+      }
+      .team-name {
+        font-size: 50px;
+        position: absolute;
+        top: 12vh;
+        left: 15px;
+      }
+      .score {
+        font-size: 100px;
+      }
+      .change-score {
+      }
     }
