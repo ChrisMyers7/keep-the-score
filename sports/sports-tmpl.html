@@ -17,15 +17,19 @@
       <div class="delete-button" ng-click='deleteTeam($index)'>X</div>
       <div class="team-name">{{team.name}}</div>
       <div class="team1-score score">{{team.score}}</div>
-      <input class="input-score" ng-model='inputScore' />
-      <button ng-click='incrementScore($index, inputScore)' type='number' class="change-score">+</button>
-      <button ng-click='decrementScore($index, inputScore)' class="change-score">-</button>
+      <div class="score-input-container">
+        <input class="input-score" ng-model='inputScore' />
+        <div class="button-container">
+          <button ng-click='incrementScore($index, inputScore)' type='number' class="change-score">+</button>
+          <button ng-click='decrementScore($index, inputScore)' class="change-score">-</button>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="ready-up">
     <button class="ready-up-button" sport-ready-up>Ready?</button>
-    <button class="ready-button hidden-footer-button" sport-ready-up>I'm Embarrassed... I Guess I'm not ready</button>
+    <button class="ready-button hidden-footer-button" id='embarrassed' sport-ready-up>I'm Embarrassed... I Guess I'm not ready</button>
   </div>
 
 </div>
