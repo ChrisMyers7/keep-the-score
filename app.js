@@ -2,8 +2,6 @@ angular.module('scoreApp', ['ui.router'])
 
   .config(function($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/')
-
     $stateProvider
       .state('home', {
         url: '/',
@@ -21,4 +19,5 @@ angular.module('scoreApp', ['ui.router'])
         controller:'sportsCtrl'
       })
 
+        $urlRouterProvider.otherwise('/');
   })
