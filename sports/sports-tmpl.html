@@ -14,6 +14,7 @@
 
   <div  class="team-container" >
     <div class="single-team" ng-repeat='team in teams'>
+      <div class="delete-button" ng-click='deleteTeam($index)'>X</div>
       <div class="team-name">{{team.name}}</div>
       <div class="team1-score score">{{team.score}}</div>
       <input class="input-score" ng-model='inputScore' />
@@ -24,7 +25,7 @@
 
   <div class="ready-up">
     <button class="ready-up-button" sport-ready-up>Ready?</button>
-    <button class="ready-button hidden-footer-button" sport-ready-up>I'm Embarrassed... I Thought i was ready</button>
+    <button class="ready-button hidden-footer-button" sport-ready-up>I'm Embarrassed... I Guess I'm not ready</button>
   </div>
 
 </div>

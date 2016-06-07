@@ -21,6 +21,9 @@ angular.module('scoreApp')
         element.on('click', function() {
           $('.input-score').toggle(display);
         })
+        element.on('click', function() {
+          $('.delete-button').toggle(display);
+        })
       }
     }
   })

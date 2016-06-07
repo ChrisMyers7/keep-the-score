@@ -18,5 +18,9 @@ angular.module('scoreApp', ['ui.router'])
         templateUrl: '/sports/sports-tmpl.html',
         controller:'sportsCtrl'
       })
-
+      // .otherwise('home', {
+      //   url: '/',
+      //   templateUrl: '/home/home-tmpl.html',
+      //   controller:'homeCtrl'
+      // })
   })

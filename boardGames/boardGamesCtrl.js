@@ -30,4 +30,8 @@ angular.module('scoreApp')
       }
     }
 
+    $scope.deletePlayer = function(e) {
+      $scope.players.splice(e,1);
+    }
+
 })
