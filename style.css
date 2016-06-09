@@ -202,6 +202,7 @@ button:hover {
           right: 10px;
           font-size: 15px;
           color: #ff3300;
+          z-index: 100;
         }
         .delete-button:hover {
           color: #62d9ff;
@@ -398,18 +399,21 @@ button:hover {
               text-align: center;
               display: none;
             }
-            .change-score {
-              background: #ff3300;
-              color: #62d9ff;
-              border: none;
-              height: 60px;
-              width: 60px;
-              border-top-left-radius: 10px;
-              border-top-right-radius: 10px;
-              border-bottom-left-radius: 10px;
-              border-bottom-right-radius: 10px;
-              font-size: 30px;
+            .button-container {
+              display: inline-block;
             }
+                .change-score {
+                  background: #ff3300;
+                  color: #62d9ff;
+                  border: none;
+                  height: 60px;
+                  width: 60px;
+                  border-top-left-radius: 10px;
+                  border-top-right-radius: 10px;
+                  border-bottom-left-radius: 10px;
+                  border-bottom-right-radius: 10px;
+                  font-size: 30px;
+                }
             .score {
               font-size: 250px;
               color: #62D9FF;
@@ -417,7 +421,7 @@ button:hover {
             }
     .ready-up {
       text-align: center;
-      margin-top: 50px
+      margin-top: 50px;
     }
     .ready-up-button {
       background: #ff3300;
@@ -435,20 +439,69 @@ button:hover {
     @media (max-width: 1000px) {
       .team-container {
         flex-direction: column;
+        padding-right: 10px;
+        text-align: center;
       }
       .single-team {
-        width: 100%;
+        width: 90%;
+        margin: auto;
         height: 32vh;
+        margin-top: 20px;
       }
       .team-name {
-        font-size: 50px;
+        font-size: 60px;
         position: absolute;
-        top: 12vh;
-        left: 15px;
+        top: 10vh;
+        left: 25px;
       }
       .score {
-        font-size: 100px;
+        font-size: 150px;
+        margin-top: 40px;
+        display: inline-block;
+        margin-left: 250px;
       }
-      .change-score {
+      .score-input-container {
+        position: absolute;
+        width: 15%;
+        right: 10px;
+        height: 24vh;
+        padding-top: 20px;
+        display: inline-block;
+        text-align: center;
+      }
+      .button-container {
+        display: block;
+        margin-top: 10px
+      }
+      .input-score {
+        margin-top: 40px;
+      }
+    }
+    @media (max-width: 775px) {
+      .team-name {
+        font-size: 75px;
+        top: 10px;
+        left: 10px;
+       }
+       .score {
+         font-size: 100px;
+         position: absolute;
+         bottom: 70px;
+         left: 150px;
+         margin-left: 0px;
+       }
+       .score-input-container {
+         width: 30%
+       }
+       .i-choose-you {
+         font-size: 60px;
+         float: right;
+         margin-right: 90px
+       }
+    }
+    @media (max-width: 500px) {
+      #embarrassed {
+        width: 400px;
+        height: 62px;
       }
     }
