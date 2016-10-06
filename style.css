@@ -1,7 +1,8 @@
 /*header styles here*/
 
 body {
-  background: #020202;
+  background: url('./img/FotorCreated.jpg') no-repeat center;
+  background-size: cover;
   font-family: 'sigmar one', sans-serif;
   padding-top: 0px;
 }
@@ -11,6 +12,12 @@ button:hover {
   background: #62d9ff;
   cursor: pointer;
 }
+button:focus {
+  outline: none;
+}
+input:focus {
+  outline: none;
+}
 /*home styles here*/
 
 .logo {
@@ -18,9 +25,10 @@ button:hover {
   width: 400px;
   background: url('./img/Scoretle.jpg') no-repeat;
   background-size: cover;
-  z-index: -10;
+  z-index: -100;
   margin-left: auto;
   margin-right: auto;
+  opacity: .9;
 }
 
 .home-container {
@@ -31,6 +39,7 @@ button:hover {
   margin-right: auto;
   margin-top: -100px;
   justify-content: space-between;
+  z-index: 10;
 }
 
     .home-buttons {
@@ -46,6 +55,7 @@ button:hover {
       color: #62d9ff;
       background: #ff3300;
       border: none;
+      z-index: 100;
     }
   .intro-text {
     color: #ff3300;
@@ -121,8 +131,9 @@ button:hover {
 .board-background {
   background: url('./img/pokemon.JPG') no-repeat center;
   background-size: cover;
-  height: 105vh;
+  height: 100vh;
   width: 100%;
+  background-attachment: fixed;
 }
 .board-play {
   color: #ff3300;
@@ -137,6 +148,7 @@ button:hover {
   text-align: center;
   /*margin-top: 10px;*/
   padding-top: 10px;
+  padding-bottom: 30px;
 }
     .opening-text {
       color: #ff3300;
@@ -500,6 +512,9 @@ button:hover {
        }
     }
     @media (max-width: 500px) {
+      .board-input-player {
+        margin-bottom: 100px;
+      }
       #embarrassed {
         width: 400px;
         height: 62px;

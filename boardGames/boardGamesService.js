@@ -1,9 +1,19 @@
 angular.module('scoreApp')
   .service('boardGamesService', function() {
 
+    // function updateStorage() {
+    //   localStorage.setItem('players', JSON.stringify(players))
+    // }
+
     var players = [];
 
+    // if (localStorage.getItem('players')) {
+    //   players = JSON.parse(localStorage.getItem('quotes'));
+    // }
+
+
     this.getPlayers = function() {
+      // updateStorage()
       return players;
     }
 
@@ -16,6 +26,7 @@ angular.module('scoreApp')
         score: 0
       }
       players.push(newPlayer);
+      // updateStorage();
     }
 
   })

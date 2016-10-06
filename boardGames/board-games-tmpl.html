@@ -8,16 +8,18 @@
 
   </section>
 
-  <section class="board-input-player">
-
-    <div class="opening-text">Choose Your Opponents</div>
-
-    <input class="board-player-input"ng-model='playerInput' ng-keyup='addNewPlayer($event)'/>
-
-    <button ng-click='clickNewPlayer()'>Add Me</button>
-  </section>
-
   <div class="board-player-container">
+
+    <section class="board-input-player">
+
+      <div class="opening-text">Choose Your Opponents</div>
+
+      <input class="board-player-input" ng-model='playerInput' ng-keyup='addNewPlayer($event)'/>
+
+      <button ng-click='clickNewPlayer()'>Add Me</button>
+      
+    </section>
+
     <div class="board-player" ng-repeat='player in players'>
       <div class="delete-button" ng-click='deletePlayer($index)'>X</div>
       <div class="board-player-name">{{player.name}}</div>
@@ -27,10 +29,10 @@
       <button class="board-player-minus board-button" ng-click='decrementScore($index, boardInputScore)'>-</button>
 
     </div>
+    <footer class="footer-button">
+      <button class="ready-button" boardgame-ready-up>Ready?</button>
+      <button class="ready-button hidden-footer-button" boardgame-ready-up>I'm Embarrassed... I Guess I'm Not Ready</button>
+    </footer>
   </div>
-  <footer class="footer-button">
-    <button class="ready-button" boardgame-ready-up>Ready?</button>
-    <button class="ready-button hidden-footer-button" boardgame-ready-up>I'm Embarrassed... I Guess I'm Not Ready</button>
-  </footer>
 
 </div>
