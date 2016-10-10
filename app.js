@@ -10,7 +10,7 @@ angular.module('scoreApp', ['ui.router'])
       })
       .state('boardGames', {
         url: '/boardGames',
-        templateUrl: '/.boardGames/board-games-tmpl.html',
+        templateUrl: './boardGames/board-games-tmpl.html',
         controller:'boardGamesCtrl'
       })
       .state('sports', {
